@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+{% block title %}Categoría{% endblock %}
+{% block content %}
+<h1>Productos de la Categoría: {{ categoria.nombre }}</h1>
+
+<ul>
+    {% for producto in productos %}
+        <li>
+            <a href="{% url 'detalle' %}">{{ producto.nombre }}</a>
+        </li>
+    {% empty %}
+        <p>No hay productos en esta categoría.</p>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'inicio' %}">Volver al inicio</a>
+{% endblock %}

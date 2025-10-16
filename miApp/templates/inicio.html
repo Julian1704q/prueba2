@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+
+{% block title %} <title>Página principal! 🏠</title> {% endblock title %}
+
+
+{% block main %}
+    <div class="d-flex flex-column align-items-center">
+        <h1>Bienvenido a la página principal! 😊</h1>
+        {%if mensaje_perso %}
+    
+    <h3> El mensaje es:  {{mensaje_perso}} </h3>
+    {% else %}
+        <p> En esta pagina se encuentran peliculas </p> 
+    {% endif %}
+        <h2>⚠️ Todas las peliculas que deseen ⚠️</h2>
+        <div class="card">
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+{% endblock main %}
+
